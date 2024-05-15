@@ -2,35 +2,64 @@
 
 {% block content %}
 
-<div class="col-md-6 offset-md-3">
-
 {% if user.is_authenticated %}
 
-<h1>Hello World!</h1>
+<table class="table table-striped table-hover table-bordered table-sm">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Anime</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Episodes</th>
+      <th scope="col">Episodes Watched</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Created At</th>
+      <th scope="col">ID</th>
+    </tr>
+    </thead>
+    <tbody>
+	  
+		{% if animes %}
+			{% for anime in animes %}
+			<tr>
+				<td>{{ anime.anime_name }}</td>
+				<td>{{ anime.genre }}</td>
+				<td>{{ anime.episodes }}</td>
+				<td>{{ anime.episodes_watched }}</td>
+				<td>{{ anime.rating }}</td>
+				<td>{{ anime.created_at }}</td>
+				<td><a href="{% url 'record' anime.id %}">{{ anime.id }}</td>
+			</tr>
+			{% endfor %}
+		{% endif %}
+	  
+	</tbody>
+</table>
+
+
+
 
 {% else %}
 
-<br/>
+<div class="col-md-6 offset-md-3">
+
 <h1>Login</h1>
 <br/>
 
 <form method="POST" action="{% url 'home' %}">
 	{% csrf_token %}
-	<form>
-  <div class="mb-3"> 
-    <input type="text" class="form-control" name="username", placeholder="Username" required>
+	
+	  <div class="mb-3"> 
+	    <input type="text" class="form-control" name="username", placeholder="Username" required>
 
-  </div>
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password", placeholder="Password" required>
-  </div>
-  <br/>
-  <button type="submit" class="btn btn-secondary">Login</button>
+	  </div>
+	  <div class="mb-3">
+	    <input type="password" class="form-control" name="password", placeholder="Password" required>
+	  </div>
+	  <br/>
+	  <button type="submit" class="btn btn-secondary">Login</button>
+	
 </form>
-</form>
-
 </div>
-
 {% endif %}
 
 {% endblock %}

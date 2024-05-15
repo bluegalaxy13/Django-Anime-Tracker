@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-header">
+    {{ anime_record.anime_name }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    
+  </div>
+</div>
+
+
+{{ anime_record.genre }} <br/>
+{{ anime_record.episodes }} <br/>
+{{ anime_record.episodes_watched }} <br/>
+{{ anime_record.rating }} <br/>
+{{ anime_record.created_at }} <br/>
+{{ anime_record.id }}
+
+{% endblock %}
