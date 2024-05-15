@@ -8,6 +8,8 @@ Welcome to the Anime Nexus Web Application! This application is designed to help
 
 ## Project Blog Article
 
+[Read my Medium post about creating an anime tracker with Django](https://medium.com/@ricardosassofficial/anime-nexus-how-i-created-a-django-web-application-2edb45821c1f)
+
 ## Features
 
 - **Track Your Progress**: Keep track of which episodes you've watched for each anime series you're following.
@@ -44,9 +46,7 @@ To get started with the Anime Tracker Web Application, follow these steps:
 
 ## Authors
 
-# Ricardo Sass
+Ricardo Sass
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/ricardo-sass-b699a3252/)
-
-Welcome to my LinkedIn profile! Feel free to connect with me to discuss anything related to technology, projects, or opportunities.
 
