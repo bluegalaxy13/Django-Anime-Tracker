@@ -28,13 +28,13 @@ To get started with the Anime Tracker Web Application, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine using `git clone`.
 
-2. **Install Dependencies**: Install the required dependencies by running `npm install` or `yarn install`.
+2. **Install Dependencies**: Install the required dependencies  'Python3, Django, MySql, MySql-connector-python'.
 
-3. **Set Up Environment Variables**: Create a `.env` file based on the provided `.env.example` file and configure it with your environment variables.
+3. **Set Up Environment Variables**: Create a `.env` file and configure it with your environment variables.
 
-4. **Run the Application**: Start the application by running `npm start` or `yarn start`.
+4. **Run the Application**: Start the application by running `python manage.py runserver`.
 
-5. **Access the Application**: Access the application by navigating to the specified URL in your web browser.
+5. **Access the Application**: Access the application by running localhost:8000 from your browser.
 
 ## Technologies Used
 
