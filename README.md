@@ -18,9 +18,9 @@ Welcome to the Anime Nexus Web Application! This application is designed to help
 - **User Profiles**
 - **Cross-Platform Access**: Access your watchlists and tracked anime from any device with an internet connection.
 
-![Register Page](register_page.png)
-![Login Page](login_page.png)
-![Home Page](home_page.png)
+![Register Page](register_page.jpg)
+![Login Page](login_page.jpg)
+![Home Page](home_page.jpg)
 
 ## Getting Started
 

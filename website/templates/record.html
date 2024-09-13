@@ -1,23 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Anime Record -->
 <div class="card">
-  <div class="card-header">
-    {{ anime_record.anime_name }}
+  <div class="card-header"><strong>
+    {{ anime_record.anime_name }}</strong>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+    <p class="card-text">
+    	<strong>Genre: </strong>{{ anime_record.genre }}<br/>
+    </p>
+
+    <p class="card-text">
+			<strong>Episodes: </strong>{{ anime_record.episodes }}<br/>
+		</p>
+
+		<p class="card-text">
+			<strong>Episodes Watched: </strong>{{ anime_record.episodes_watched }}<br/>
+		</p>
+
+		<p class="card-text">
+			<strong>Rating: </strong>{{ anime_record.rating }}<br/>
+		</p>
+
+		<p class="card-text">
+			<strong>Created At: </strong>{{ anime_record.created_at }}<br/>
+		</p>
+
+		<p class="card-text">
+			<strong>ID: </strong>{{ anime_record.id }}<br/>
+		</p>
+    
     
   </div>
 </div>
 
+<!-- Back button -->
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
 
-{{ anime_record.genre }} <br/>
-{{ anime_record.episodes }} <br/>
-{{ anime_record.episodes_watched }} <br/>
-{{ anime_record.rating }} <br/>
-{{ anime_record.created_at }} <br/>
-{{ anime_record.id }}
+<a href="{% url 'delete_record' anime_record.id %}" class="btn btn-danger">Delete</a>
+
+<a href="{% url 'update_record' anime_record.id %}" class="btn btn-secondary">Update Anime</a>
 
 {% endblock %}
